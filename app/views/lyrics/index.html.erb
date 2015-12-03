@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Library</h1>
+
+<div class="song">
+
+    <% @lyrics.each do |lyric| %>
+
+        <strong><%= lyric.name %></strong>  |  <%= link_to 'Show', lyric %>
+        <%= link_to 'Edit', edit_lyric_path(lyric) %>
+        <%= link_to 'Destroy', lyric, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+        <span style="white-space: pre-wrap;"><%= lyric.content %></span><br /><br />
+        <br />
+    <% end %>
+
+</div>
+<br>
+
+<div class="btn-group">
+<button type="button" class="btn btn-default btn-sm"><%= link_to 'New Lyric', new_lyric_path %></button>
+</div>

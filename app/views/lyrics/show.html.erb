@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lyric.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <span style="white-space: pre-wrap;"><%= @lyric.content %></span>
+</p>
+
+<%= link_to 'Edit', edit_lyric_path(@lyric) %> |
+<%= link_to 'Back', lyrics_path %>
+

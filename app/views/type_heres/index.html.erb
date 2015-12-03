@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Type Heres</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Words</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @type_heres.each do |type_here| %>
+      <tr>
+        <td><%= type_here.title %></td>
+        <td><%= type_here.words %></td>
+        <td><%= link_to 'Show', type_here %></td>
+        <td><%= link_to 'Edit', edit_type_here_path(type_here) %></td>
+        <td><%= link_to 'Destroy', type_here, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Type here', new_type_here_path %>

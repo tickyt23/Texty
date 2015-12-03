@@ -1,0 +1,25 @@
+<%= form_for(@type_here) do |f| %>
+  <% if @type_here.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@type_here.errors.count, "error") %> prohibited this type_here from being saved:</h2>
+
+      <ul>
+      <% @type_here.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_area :title %>
+  </div>
+  <div class="field">
+    <%= f.label :words %><br>
+    <%= f.text_area :words %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

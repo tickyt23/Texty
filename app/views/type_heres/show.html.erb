@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @type_here.title %>
+</p>
+
+<p>
+  <strong>Words:</strong>
+  <%= @type_here.words %>
+</p>
+
+<%= link_to 'Edit', edit_type_here_path(@type_here) %> |
+<%= link_to 'Back', type_heres_path %>
